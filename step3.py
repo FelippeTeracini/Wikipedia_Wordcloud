@@ -26,7 +26,10 @@ def acha_palavras_top(texto):
     for p in palavras:
         tf[p] += 1
     for p in tf:
-        tf[p] *= idf[p]
+        if p in idf:
+            tf[p] *= idf[p]
+        else:
+            tf[p] *= 0
     tfidf = [(v, p) for p, v in tf.items()]
     tfidf = sorted(tfidf, reverse=True)
     return [x[1] for x in tfidf[:25]]
