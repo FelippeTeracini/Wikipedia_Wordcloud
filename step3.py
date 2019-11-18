@@ -20,10 +20,10 @@ sc = spark.sparkContext
 broadcast_var = sc.broadcast(idf)
 
 def acha_palavras_top(texto):
-    if text[0] is not None:
+    if texto is not None:
         idf = broadcast_var.value
         idf = dict(idf)
-        text_ready = str(texto[0])
+        text_ready = str(texto)
         palavras = re.findall("\w+", text_ready)
         tf = defaultdict(int)
         for p in palavras:
@@ -35,7 +35,7 @@ def acha_palavras_top(texto):
                 tf[p] *= 0
         tfidf = [(v, p) for p, v in tf.items()]
         tfidf = sorted(tfidf, reverse=True)
-        return [x[1] for x in tfidf[:25]]
+        return [x[1] for x in tfidf[:10]]
     else:
         lista = []
         return lista
