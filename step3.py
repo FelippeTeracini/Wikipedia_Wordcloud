@@ -7,7 +7,7 @@ from collections import defaultdict
 import os
 import re
 
-command = 'aws s3 cp s3://brubs-c/data/idf.pickle main_idf.pickle'
+command = 'aws s3 cp s3://brubs-c/data/main_idf.pickle main_idf.pickle'
 os.system(command)
 
 with open('main_idf.pickle', 'rb') as f:

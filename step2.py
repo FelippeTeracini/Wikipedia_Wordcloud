@@ -19,6 +19,7 @@ n_docs = rdd.count()
 res = rdd.map(cut_words) \
     .flatMap(lambda x: [(k, 1) for k in set(x)]) \
     .reduceByKey(lambda x, y: x + y) \
+    .filter(lambda x: x[1] > 20) \
     .map(lambda x: (x[0], log10(n_docs/x[1]))) \
     .collect()
 
