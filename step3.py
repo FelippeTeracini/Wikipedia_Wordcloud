@@ -7,10 +7,10 @@ from collections import defaultdict
 import os
 import re
 
-command = 'aws s3 cp s3://brubs-c/data/idf.pickle idf.pickle'
+command = 'aws s3 cp s3://brubs-c/data/idf.pickle main_idf.pickle'
 os.system(command)
 
-with open('idf.pickle', 'rb') as f:
+with open('main_idf.pickle', 'rb') as f:
     idf = pickle.load(f)
 
 spark = SparkSession.builder.getOrCreate()
@@ -54,7 +54,7 @@ def conta_palavras(item):
         contagem[p] += 1
     return (item[0], contagem)
 
-rdd = spark.read.format('parquet').load('s3://brubs-c/data/teste_parquet').rdd.map(tuple)
+rdd = spark.read.format('parquet').load('s3://brubs-c/data/main_parquet').rdd.map(tuple)
 
 res = rdd \
     .map(lambda x: x[0])\
@@ -66,8 +66,8 @@ res = rdd \
 
 print(res)
 
-with open('teste_final.pickle', 'wb') as f:
+with open('final.pickle', 'wb') as f:
     pickle.dump(res, f)
 
-command = 'aws s3 cp teste_final.pickle s3://brubs-c/data/'
+command = 'aws s3 cp final.pickle s3://brubs-c/data/'
 os.system(command)
