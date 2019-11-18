@@ -21,7 +21,8 @@ broadcast_var = sc.broadcast(idf)
 def acha_palavras_top(texto):
     idf = broadcast_var.value
     idf = dict(idf)
-    palavras = re.findall("\w+", texto)
+    text_ready = str(text[0])
+    palavras = re.findall("\w+", text_ready)
     tf = defaultdict(int)
     for p in palavras:
         tf[p] += 1
