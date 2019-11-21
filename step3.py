@@ -12,6 +12,7 @@ os.system(command)
 
 with open('main_idf.pickle', 'rb') as f:
     idf = pickle.load(f)
+idf = dict(idf)
 
 spark = SparkSession.builder.getOrCreate()
 
@@ -19,10 +20,10 @@ sc = spark.sparkContext
 
 broadcast_var = sc.broadcast(idf)
 
+
 def acha_palavras_top(texto):
     if texto is not None:
         idf = broadcast_var.value
-        idf = dict(idf)
         text_ready = str(texto)
         palavras = re.findall("\w+", text_ready)
         tf = defaultdict(int)
@@ -40,13 +41,15 @@ def acha_palavras_top(texto):
         lista = []
         return lista
 
+
 def gera_pares(lista_palavras):
     pares = []
     for p in lista_palavras:
         for q in lista_palavras:
             if p != q:
-                pares.append((p,q))
+                pares.append((p, q))
     return pares
+
 
 def conta_palavras(item):
     contagem = defaultdict(int)
@@ -54,7 +57,9 @@ def conta_palavras(item):
         contagem[p] += 1
     return (item[0], contagem)
 
-rdd = spark.read.format('parquet').load('s3://brubs-c/data/main_parquet').rdd.map(tuple)
+
+rdd = spark.read.format('parquet').load(
+    's3://brubs-c/data/main_parquet').rdd.map(tuple)
 
 res = rdd \
     .map(lambda x: x[0])\
