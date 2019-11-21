@@ -1,8 +1,6 @@
 # **Wikipedia Wordcloud**
 
-### Pipeline de Engenharia de Dados utilizando TF-IDF.
-
-A wordcloud generator made from the wikipedia database
+Pipeline de Engenharia de Dados utilizando TF-IDF.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8a/V_wordcloud_skill.png)
 
