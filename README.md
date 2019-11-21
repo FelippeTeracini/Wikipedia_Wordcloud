@@ -4,7 +4,7 @@
 
 A wordcloud generator made from the wikipedia database
 
-!(https://upload.wikimedia.org/wikipedia/commons/8/8a/V_wordcloud_skill.png)
+![](https://upload.wikimedia.org/wikipedia/commons/8/8a/V_wordcloud_skill.png)
 
 #### Introdução e Objetivos
 
