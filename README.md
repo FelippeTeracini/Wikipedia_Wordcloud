@@ -58,4 +58,13 @@ E em seguida digitar a palavra desejada no cmd.
 
 ## Exemplo
 
-O arquivo "freddy.png" é um exemplo da wordcloud retornada ao se escolher a palavra "Freddy" no programa.
+Os arquivos "freddy.png" e "saxophonist.png" são exemplos da wordcloud retornada ao se escolher a palavra "Freddy" e "saxophonist" no programa respectivamente.
+
+<h1 align="center"> freddy.png </h1>
+<p align="center">
+  <img src="freddy.png" width="350" title="freddy.png">
+</p>
+<h1 align="center"> saxophonist.png </h1>
+<p align="center">
+  <img src="saxophonist.png" width="350" title="saxophonist.png">
+</p>
