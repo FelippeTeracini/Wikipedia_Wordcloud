@@ -2,7 +2,7 @@ import pickle
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
-with open('teste_final.pickle', 'rb') as f:
+with open('final.pickle', 'rb') as f:
     word_dict = dict(pickle.load(f))
 
 
