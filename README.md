@@ -37,7 +37,7 @@ Foi utilizado o serviço de Clusters e Buckets da AWS S3 com a seguinte composi�
 
 Essa configuração foi pensada de modo que o número de Cores necessário para realizar a atividade num nível baixo, mas aceitável, seria pequeno, pois o trabalho não é muito custoso. Assim, mesmo que a AWS derrube as Tasks o projeto consegue continuar mesmo que mais lento.
 
-Após realizados os teste com o banco completo, ficou claro que a pipeline estava lenta demais para que as queries pudessem ser feitas com eficiência. O que dificultou o debugging na medida que cada iteração do código demorava muito para ser testado. Para testar realmente o resultado do projeto foi feito um recorte da base de textos e essa tentativa obteve sucesso, provando a integridade da pipeline.
+Após realizados os teste com o banco completo, ficou claro que a pipeline estava lenta demais para que as queries pudessem ser feitas com eficiência. O que dificultou o debugging na medida que cada iteração do código demorava muito para ser testado. Para testar realmente o resultado do projeto foi feito um recorte da base de textos e essa tentativa obteve sucesso, provando a integridade da pipeline. Porém, como é apenas um recorte, faltam informações e algumas palavras que não são tão populares acabam ficando com muita "poluição" devido a isso.
 
 ## Funcionamento
 
