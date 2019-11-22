@@ -38,3 +38,20 @@ Foi utilizado o serviço de Clusters e Buckets da AWS S3 com a seguinte composi�
 Essa configuração foi pensada de modo que o número de Cores necessário para realizar a atividade num nível baixo, mas aceitável, seria pequeno, pois o trabalho não é muito custoso. Assim, mesmo que a AWS derrube as Tasks o projeto consegue continuar mesmo que mais lento.
 
 Após realizados os teste com o banco completo, ficou claro que a pipeline estava lenta demais para que as queries pudessem ser feitas com eficiência. O que dificultou o debugging na medida que cada iteração do código demorava muito para ser testado. Para testar realmente o resultado do projeto foi feito um recorte da base de textos e essa tentativa obteve sucesso, provando a integridade da pipeline.
+
+## Funcionamento
+
+Para instalar as dependências necessárias basta rodar os seguintes comandos no terminal:
+
+```bash
+pip3 install wordcloud
+```
+```bash
+pip3 install matplotlib
+```
+
+Para utilizar o gerador de wordcloud basta rodar o seguinte comando no terminal:
+```bash
+python3 wordcloud1.py
+```
+E em seguida digitar a palavra desejada no cmd.
