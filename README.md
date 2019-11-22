@@ -55,3 +55,7 @@ Para utilizar o gerador de wordcloud basta rodar o seguinte comando no terminal:
 python3 wordcloud1.py
 ```
 E em seguida digitar a palavra desejada no cmd.
+
+## Exemplo
+
+O arquivo "freddy.png" é um exemplo da wordcloud retornada ao se escolher a palavra "Freddy" no programa.
