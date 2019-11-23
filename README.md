@@ -44,15 +44,15 @@ Após realizados os teste com o banco completo, ficou claro que a pipeline estav
 Para instalar as dependências necessárias basta rodar os seguintes comandos no terminal:
 
 ```bash
-pip3 install wordcloud
+$ pip3 install wordcloud
 ```
 ```bash
-pip3 install matplotlib
+$ pip3 install matplotlib
 ```
 
 Para utilizar o gerador de wordcloud basta rodar o seguinte comando no terminal:
 ```bash
-python3 wordcloud1.py
+$ python3 wordcloud1.py
 ```
 E em seguida digitar a palavra desejada no cmd.
 
